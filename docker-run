@@ -1,0 +1,7 @@
+docker rm -f ssh-bastion
+
+docker run -d \
+--name ssh-bastion \
+-p 2022:22 \
+-e SSH_PUB_KEY="" \
+coleji/ssh-bastion
